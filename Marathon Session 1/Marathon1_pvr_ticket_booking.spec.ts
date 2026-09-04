@@ -10,12 +10,10 @@ test('Book Movie Ticket in PVR Cinemas', async({page})=>
 {
     await page.goto('https://www.pvrcinemas.com/')
     await page.locator('//h6[text()="Chennai"]').click()
-    await page.waitForTimeout(5000)
     await page.locator('//span[@class="cinemas-inactive"]').click()
     await page.locator('//span[text ( ) = "Select Cinema"]').click()
     await page.locator('//span[text ( ) = "INOX The Marina Mall, OMR, Chennai"]').click()
 //await page.locator('//span[text()="Select Date"]').click()
-await page.waitForTimeout(5000)
 await page.locator('//li[@class="p-dropdown-item"][1]').click()
 await page.locator('#movie').click()
 await page.getByText('IMMORTAL').last().click()
